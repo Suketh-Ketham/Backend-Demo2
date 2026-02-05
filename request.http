@@ -1,0 +1,72 @@
+### Read all users
+GET http://localhost:4000/user-api/users
+
+###Read user by id
+GET http://localhost:4000/user-api/users/697dbae55727635e4d5c066c
+
+### Create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"gowtam",
+    "password":"12345",
+    "age":21
+}
+
+###Update user
+PUT http://localhost:4000/user-api/users/697dbcdc899e43c58912a4ed
+Content-Type: application/json
+
+{
+    "username":"gowtam",
+    "password":"12345",
+    "age":22
+}
+
+### Delete user
+DELETE http://localhost:4000/user-api/users/
+
+
+### User authentication (login) req
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "username":"gowtam",
+    "password":"12345"
+}
+
+### Request for protected route
+GET http://localhost:4000/user-api/test
+
+
+###-------------------------------------------------------------------------------------------------
+### Read all products
+GET http://localhost:4000/product-api/products
+
+### Read product by ID
+GET http://localhost:4000/product-api/products/697dd3653bbfdb5a71047bde
+
+### Create user
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "pid":100,
+    "productName":"Laptop",
+    "price":75000
+}
+
+###
+PUT http://localhost:4000/product-api/products/697dd3653bbfdb5a71047bde
+Content-Type: application/json
+
+{
+    "pid":100,
+    "productName":"Phone",
+    "price":75000
+}
+
+### Delete user
+DELETE http://localhost:4000/user-api/users/697dd3653bbfdb5a71047bde
